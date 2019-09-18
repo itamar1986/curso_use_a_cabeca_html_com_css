@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>A máquina de feijão Starbuzz</title>
+	</head>
+	<body>
+		<h1>A máquina de feijão Starbuzz</h1>
+		<h2>Preencha o formulário abaixo e clique em "encomendar agora" para encomendar</h2>
+		<form action="http://starbuzzcoffee.com/processorder.php" method="post">
+		<p>
+			Escolha seus feijões:
+            <select name="beans">
+				<option value="House Blend">Mistura de casa</option>
+				<option value="Bolivia">Bolívia crescida à sombra Supremo</option>
+				<option value="Guatemala">Guatemala orgânica</option>
+				<option value="Kenya">Quênia</option>
+            </select>
+		</p>
+		<p>
+			Tipo:<br>
+				<input type="radio" name="beantype" value="whole">
+            Feijão inteiro<br>
+				<input type="radio" name="beantype" value="ground" checked> 
+            Terra
+		</p>
+		<p>
+			Número de malas: <input type="number" name="bags" min="1" max="10">
+		</p>
+		<p>
+			Deve chegar por data: <input type="date" name="date">
+		</p>
+		<p>
+			Extras:<br>
+				<input type="checkbox" name="extras[]" value="giftwrap">
+            Papel de embrulho<br>
+				<input type="checkbox" name="extras[]" value="catalog" checked>
+            Incluir catálogo com pedido
+		</p>
+		<p>
+          Enviar para: <br>
+          Nome:
+            <input type="text" name="name" value=""><br>
+          Endereço:
+            <input type="text" name="address" value=""><br>
+          Cidade:
+            <input type="text" name="city" value=""><br>
+          Estado:
+            <input type="text" name="state" value=""><br>
+          Cep:
+            <input type="text" name="zip" value=""><br>
+		  telefone:
+			<input type="tel" name="phone" value=""><br>
+		</p>
+		<p>
+          Comentários dos clientes:<br>
+            <textarea name="comments"></textarea>
+		</p>
+		<p>
+            <input type="submit" value="Enviar">
+		</p>
+      </form>
+  </body>
+</html>
+

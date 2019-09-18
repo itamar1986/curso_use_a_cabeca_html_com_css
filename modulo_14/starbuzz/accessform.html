@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>A máquina de feijão Starbuzz</title>
+		<link rel="stylesheet" href="starbuzz.css">
+		<link rel="stylesheet" href="accessform.css">
+	</head>
+	<body>
+		<h1>A máquina de feijão Starbuzz</h1>
+		<h2>Preencha o formulário abaixo e clique em "encomendar agora" para encomendar</h2>
+		<form action="http://www.starbuzzcoffee.com/processorder.php" method="post">
+	<fieldset>
+		<legend>Detalhes do pedido</legend>
+		<div class="tableRow">
+			<label for="beans">
+				Escolha seus feijões:
+			</label>
+            <select id="beans" name="beans">
+				<option value="House Blend">Mistura de casa</option>
+				<option value="Bolivia">Bolívia crescida à sombra Supremo</option>
+				<option value="Guatemala">Guatemala orgânica</option>
+				<option value="Kenya">Quênia</option>
+            </select>
+		</div>
+		<div class="tableRow">
+			<label>Tipo:</label>
+			<p>
+				<input type="radio" id="whole_beantype" name="beantype" value="whole"> 
+					<label for="whole_beantype">Feijão inteiro</label><br>
+            	<input type="radio" id="ground_beantype" name="beantype" value="ground" checked> 
+            		<label for="ground_beantype">Terra</label>
+			</p>
+		</div>
+		<div class="tableRow">
+			<label for="bags">Número de malas:</label>
+			<input type="number" id="bags" name="bags" min="1" max="10">
+		</div>
+		<div class="tableRow">
+			<label for="date">Deve chegar por data:</label>
+			<input type="date" name="date">
+		</div>
+		<div class="tableRow">
+			<label>Extras:</label>
+			<p>
+            	<input type="checkbox" id="giftwrap_extras" name="extras[]" value="giftwrap"> 
+					<label for="giftwrap_extras">Papel de embrulho</label><br>
+            	<input type="checkbox" id="catalog_extras" name="extras[]" value="catalog" checked>
+            		<label for="catalog_extras">Incluir catálogo com pedido</label>
+			</p>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Enviar para</legend>
+		<div class="tableRow">
+			<label for="name">Nome:</label>
+			<input type="text" id="name" name="name" value="" placeholder="Buckaroo Banzai" required> 
+		</div>
+		<div class="tableRow">
+			<label for="address">Endereço:</label>
+			<input type="text" id="address" name="address" value="" placeholder="Banzai Institute" required> 
+		</div>
+		<div class="tableRow">
+			<label for="city">Cidade:</label>
+			<input type="text" id="city" name="city" value="" placeholder="Los Angeles" required> 
+		</div>
+		<div class="tableRow">
+			<label for="state">Estado:</label>
+			<input type="text" id="state" name="state" value="" placeholder="CA" required>
+		</div>
+		<div class="tableRow">
+			<label for="zip">Cep:</label>
+			<input type="text" id="zip" name="zip" value="" placeholder="90050" required>
+		</div>
+		<div class="tableRow">
+			<label for="phone">telefone:</label>
+			<input type="tel" id="phone" name="phone" value="" placeholder="310-555-1212" required>
+		</div>
+		<div class="tableRow">
+			<label for="comments">Comentários dos clientes:</label>
+            <textarea id="comments" name="comments"></textarea>
+		</div>
+		<div class="tableRow">
+			<label></label>
+			<input type="submit" value="Enviar">
+		</div>
+	</fieldset>
+		</form>
+		<!--
+			Criando um formulario para a entrada de dados.
+			Formulario para realizar os pedidos.
+		-->
+	</body>
+</html>
+

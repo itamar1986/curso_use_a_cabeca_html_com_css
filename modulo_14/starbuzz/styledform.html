@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>A máquina de feijão Starbuzz</title>
+		<link rel="stylesheet" href="starbuzz.css">
+		<link rel="stylesheet" href="accessform.css">
+	</head>
+	<body>
+		<h1>A máquina de feijão Starbuzz</h1>
+		<h2>Preencha o formulário abaixo e clique em "encomendar agora" para encomendar</h2>
+		<form action="http://www.starbuzzcoffee.com/processorder.php" method="post">
+		<div class="tableRow">
+			<p>
+			  Escolha seus feijões:
+			</p>
+			<p>
+				<select name="beans">
+					<option value="House Blend">Mistura de casa</option>
+					<option value="Bolivia">Bolívia crescida à sombra Supremo</option>
+					<option value="Guatemala">Guatemala orgânica</option>
+					<option value="Kenya">Quênia</option>
+				</select>
+			</p>
+		</div>
+	<div class="tableRow">
+		<p> Tipo: </p>
+		<p>
+            <input type="radio" name="beantype" value="whole">Feijão inteiro<br>
+            <input type="radio" name="beantype" value="ground" checked>Terra
+		</p>
+	</div>
+	<div class="tableRow">
+		<p> Número de malas: </p>
+		<p> <input type="number" name="bags" min="1" max="10"> </p>
+	</div>
+	<div class="tableRow label">
+		<p> Deve chegar por data: </p>
+		<p> <input type="date" name="date"> </p>
+	</div>
+	<div class="tableRow">
+		<p> Extras: </p>
+		<p>
+            <input type="checkbox" name="extras[]" value="giftwrap"> Papel de embrulho<br>
+            <input type="checkbox" name="extras[]" value="catalog" checked>Incluir catálogo com pedido
+		</p>
+	</div>
+	<div class="tableRow">
+		<p class="heading"> Enviar para </p>
+		<p></p>
+	</div>
+	<div class="tableRow">
+		<p> Nome: </p>
+		<p> <input type="text" name="name" value="" placeholder="Buckaroo Banzai" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> Endereço: </p>
+		<p> <input type="text" name="address" value="" placeholder="Banzai Institute" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> Cidade: </p>
+		<p> <input type="text" name="city" value="" placeholder="Los Angeles" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> Estado: </p>
+		<p> <input type="text" name="state" value="" placeholder="CA" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> Cep: </p>
+		<p> <input type="text" name="zip" value="" placeholder="90050" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> telefone: </p>
+		<p> <input type="tel" name="phone" value="" placeholder="310-555-1212" required> </p>
+	</div>
+	<div class="tableRow">
+		<p> Comentários dos clientes: </p>
+		<p>
+            <textarea name="comments"></textarea>
+		</p>
+	</div>
+	<div class="tableRow">
+		<p></p>
+		<p> <input type="submit" value="Enviar"> </p>
+	</div>
+		</form>
+		<!--
+			Criando um formulario para a entrada de dados.
+			Formulario para realizar os pedidos.
+		-->
+	</body>
+</html>
+
